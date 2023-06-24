@@ -18,6 +18,7 @@ https://github.com/nwnxee/unified/compare/build8193.35.40...HEAD
 ##### New NWScript Functions
 - Object: GetLastSpellInstant()
 - Creature: {Get|Set}MaxSellToStorePriceOverride()
+- Creature: {Get|Set}AbilityIncreaseByLevel()
 
 ### Changed
 - Creature: Added an argument for passing a class package to `NWNX_Creature_LevelUp()`
@@ -30,7 +31,7 @@ https://github.com/nwnxee/unified/compare/build8193.35.40...HEAD
 - N/A
 
 ### Fixed
-- N/A
+- Experimental: PlayerHitpointsAsPercentage: added the new argument nMessageLimit to SendServerToPlayerGameObjUpdate hook
 
 ## 8193.35.40
 https://github.com/nwnxee/unified/compare/build8193.35.37...build8193.35.40
