@@ -13,12 +13,14 @@ https://github.com/nwnxee/unified/compare/build8193.35.40...HEAD
 - Events: added event `NWNX_ON_SPELL_FAILED_{BEFORE|AFTER}` which fires when the casting of a spell did not finish for any reason.
 
 ##### New Plugins
-- N/A
+- Resources: Adds `RESOURCES_*` variables for adding NWSync as a resource source, and specifying a replacement hak list.
 
 ##### New NWScript Functions
 - Object: GetLastSpellInstant()
+- Object: SetTrapCreator()
 - Creature: {Get|Set}MaxSellToStorePriceOverride()
 - Creature: {Get|Set}AbilityIncreaseByLevel()
+- Util: GetModuleFile()
 
 ### Changed
 - Creature: Added an argument for passing a class package to `NWNX_Creature_LevelUp()`
@@ -60,7 +62,7 @@ https://github.com/nwnxee/unified/compare/build8193.35.37...build8193.35.40
 - ***ABI BREAKING:*** Damage: SetAttackEventData() can now set `AttackEventData.iSneakAttack`. This only affects the attack roll message and floating text feedback. Immunities and damage will have already been resolved by the time the attack event script is ran.
 
 ### Fixed
-- Tweaks: FixResolveSpecialAttackDamage: fixed a crash involving ranged special attacks interacting oddly with Epic Dodge. 
+- Tweaks: FixResolveSpecialAttackDamage: fixed a crash involving ranged special attacks interacting oddly with Epic Dodge.
 - Player: fixed ToggleDM() not working correctly with EffectTimeStopImmunity().
 
 ## 8193.35.37
@@ -134,7 +136,7 @@ https://github.com/nwnxee/unified/compare/build8193.34final...build8193.35.36
   - Effect: SetEffectExpiredScript()
   - Effect: GetEffectExpiredData()
   - Effect: GetEffectExpiredCreator()
-  - Effect: AccessorizeVisualEffect() 
+  - Effect: AccessorizeVisualEffect()
   - Object: StringToObject()
   - Object: CheckFit()
   - Object: AddIconEffect()
@@ -172,7 +174,7 @@ https://github.com/nwnxee/unified/compare/build8193.34...build8193.34final
 - Events: added skippable event `NWNX_ON_DEBUG_PLAY_VISUAL_EFFECT_{BEFORE|AFTER}` which fires when the dm_visualeffect console command is used.
 - Events: added skippable event `NWNX_ON_RUN_EVENT_SCRIPT_{BEFORE|AFTER}` which fires on all object event scripts.
 - Events: added skippable event `NWNX_ON_BARTER_ADD_ITEM_{BEFORE|AFTER}` which fires when an item is added to the barter window.
-- Experimental: added `NWNX_EXPERIMENTAL_IGNORE_MODULE_VERSION` to ignore the module version when loading. 
+- Experimental: added `NWNX_EXPERIMENTAL_IGNORE_MODULE_VERSION` to ignore the module version when loading.
 - Events: added `NWNX_ON_OBJECT_USE_{BEFORE|AFTER}` which fires when player uses a placeable.
 
 ##### New NWScript Functions
