@@ -5,3 +5,4 @@
 #include "nwnx"
 #include "nwnx_cj_creature"
 #include "nwnx_cj_damage"
+#include "nwnx_cj_util"
