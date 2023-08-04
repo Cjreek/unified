@@ -161,19 +161,6 @@ static void InitializeAttackActionsHook(CNWSCombatRound* pCombatRound, OBJECT_ID
     pCombatRound->DecrementRoundLength(std::min(nTotalAnimationTime, 3000));
 }
 
-NWNX_EXPORT ArgumentStack SetCreatureAttackSpeed(ArgumentStack&& args)
-{
-    if (auto* pCreature = Utils::PopCreature(args))
-    {
-        auto fAttackSpeed = args.extract<float>();
-        auto fAttackDelay = 1.0f / fAttackSpeed;
-
-        pCreature->nwnxSet("ATTACK_DELAY", fAttackDelay, false);
-    }
-
-    return {};
-}
-
 NWNX_EXPORT ArgumentStack EndCombatRound(ArgumentStack&& args)
 {
     if (auto* pCreature = Utils::PopCreature(args))

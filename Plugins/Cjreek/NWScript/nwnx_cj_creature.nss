@@ -38,3 +38,33 @@ void NWNX_Creature_UpdateCombatInformation(object oCreature)
 
     NWNX_CallFunction(NWNX_Cjreek_Creature, sFunc);
 }
+
+void NWNX_Creature_SetAttackSpeed(object oCreature, float fAttackSpeed)
+{
+    string sFunc = "SetAttackSpeed";
+
+    NWNX_PushArgumentFloat(fAttackSpeed);
+    NWNX_PushArgumentObject(oCreature);
+
+    NWNX_CallFunction(NWNX_Cjreek_Creature, sFunc);
+}
+
+void NWNX_Creature_SetHitPointBonus(object oCreature, int nHitPointBonus)
+{
+    string sFunc = "SetHitPointBonus";
+
+    NWNX_PushArgumentInt(nHitPointBonus);
+    NWNX_PushArgumentObject(oCreature);
+
+    NWNX_CallFunction(NWNX_Cjreek_Creature, sFunc);
+}
+
+void NWNX_Creature_SetHitPointIncrease(object oCreature, int nHitPointIncrease)
+{
+    string sFunc = "SetHitPointIncrease";
+
+    NWNX_PushArgumentInt(nHitPointIncrease);
+    NWNX_PushArgumentObject(oCreature);
+
+    NWNX_CallFunction(NWNX_Cjreek_Creature, sFunc);
+}
