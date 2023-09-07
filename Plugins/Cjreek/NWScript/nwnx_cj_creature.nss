@@ -9,6 +9,10 @@ void NWNX_Creature_RestoreSpells(object creature, int level = -1);
 
 int NWNX_Creature_GetMaximumKnownSpellLevel(object oCreature, int nClass);
 void NWNX_Creature_UpdateCombatInformation(object oCreature);
+void NWNX_Creature_SetAttackSpeed(object oCreature, float fAttackSpeed);
+void NWNX_Creature_SetHitPointBonus(object oCreature, int nHitPointBonus);
+void NWNX_Creature_SetHitPointIncrease(object oCreature, int nHitPointIncrease);
+void NWNX_Creature_SetSpellChannelDuration(object oCreature, float fDuration);
 
 void NWNX_Creature_RestoreSpells(object creature, int level = -1)
 {
@@ -64,6 +68,16 @@ void NWNX_Creature_SetHitPointIncrease(object oCreature, int nHitPointIncrease)
     string sFunc = "SetHitPointIncrease";
 
     NWNX_PushArgumentInt(nHitPointIncrease);
+    NWNX_PushArgumentObject(oCreature);
+
+    NWNX_CallFunction(NWNX_Cjreek_Creature, sFunc);
+}
+
+void NWNX_Creature_SetSpellChannelDuration(object oCreature, float fDuration)
+{
+    string sFunc = "SetSpellChannelDuration";
+
+    NWNX_PushArgumentFloat(fDuration);
     NWNX_PushArgumentObject(oCreature);
 
     NWNX_CallFunction(NWNX_Cjreek_Creature, sFunc);

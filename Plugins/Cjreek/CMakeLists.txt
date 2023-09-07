@@ -4,4 +4,7 @@ add_plugin(Cjreek
     "Extensions/Creature.cpp"
     "Extensions/Damage.cpp"
     "Extensions/Util.cpp"
-    "Tweaks/HardnessToLocal.cpp")
+    "Extensions/Events/SelectObjectEvent.cpp"
+    "Extensions/Events/LevelUpDownEvent.cpp"
+    "Tweaks/HardnessToLocal.cpp"
+    "Tweaks/EquipUnequipEventTweaks.cpp")

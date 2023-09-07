@@ -6,7 +6,6 @@
 using namespace NWNXLib;
 using namespace NWNXLib::API;
 
-
 static BOOL PlaceableLoadFromTemplateHook(CNWSPlaceable* pPlaceable, CResRef cResRef, CExoString* pTag);
 static BOOL LoadPlaceableHook(CNWSPlaceable* pPlaceable, CResGFF * pRes, CResStruct * cPlaceableStruct, BOOL bLoadOID, CExoString * pTag);
 static BOOL LoadDoorHook(CNWSDoor* pDoor, CResGFF * pRes, CResStruct * cItemStruct);
